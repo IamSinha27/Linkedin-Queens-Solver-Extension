@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Queens Auto-Solver",
+  "version": "1.0",
+  "description": "Solves the LinkedIn Queens puzzle by auto-placing queens on the board.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Auto-Solve LinkedIn Queens"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
